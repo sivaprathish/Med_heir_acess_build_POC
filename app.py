@@ -87,7 +87,7 @@ try: db=load()
 except Exception as e: st.error(f'Cannot load CSV files: {e}'); st.stop()
 if 'notice' in st.session_state: st.success(st.session_state.pop('notice'))
 
-PAGES={'Overview':'🏠','Nodes':'🔵','Hierarchies & rules':'🧬','Relationships':'🔗','Hierarchy explorer':'🌐','Validation':'✅','Reporting output':'📊'}
+PAGES={'Overview','Nodes','Hierarchies & rules','Relationships','Hierarchy explorer','Validation','Reporting output'}
 page=st.sidebar.radio('Workspace',list(PAGES),format_func=lambda p:f'{PAGES[p]}  {p}')
 st.sidebar.caption('Changes are saved to the data folder. Previous table versions are kept as .csv.bak files.')
 
