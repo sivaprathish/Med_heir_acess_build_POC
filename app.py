@@ -78,14 +78,11 @@ h2, h3 { color:var(--navy); font-weight:600; }
 [data-testid="stAlert"] { border-radius:12px; }
 </style>
 """
+st.logo('logo.png', size='large')
+
 st.markdown(THEME_CSS, unsafe_allow_html=True)
 
-# Create columns for top-left image placement
-col1, col2 = st.columns([1, 4])
-with col1:
-    st.image('logo.png', width=120)
-with col2:
-    st.title('Hierarchy Studio')
+st.title('Hierarchy Studio')
 st.caption('RST hierarchy management • CSV proof of concept')
 st.info('Demo mappings only. Master names come from HierDesign.xlsx; sample tower and connections are illustrative. Local single-user use.')
 try: db=load()
