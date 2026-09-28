@@ -82,7 +82,7 @@ st.logo('logo.png', size='large')
 
 st.markdown(THEME_CSS, unsafe_allow_html=True)
 
-st.title('Hierarchy Studio')
+st.title('Hierarchy App')
 st.caption('RST hierarchy management • CSV proof of concept')
 try: db=load()
 except Exception as e: st.error(f'Cannot load CSV files: {e}'); st.stop()
